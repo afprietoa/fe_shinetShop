@@ -1,3 +1,9 @@
-// import {product} from '../data/products';
+import {printCards} from './modules/printCards.js';
+import products from './data/products.js';
 
-console.log('Test');
+const container = document.getElementById('cards-container') as HTMLFormElement;
+
+document.addEventListener('DOMContentLoaded',()=>{
+
+    printCards(container, products);
+})

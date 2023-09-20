@@ -1,4 +1,6 @@
-const delivery = [
+import {Delivery} from '../interfaces/delivery.js';
+
+const deliveries:Array<Delivery> = [
   {
     id: 1,
     shortName: "UPS1",
@@ -29,4 +31,4 @@ const delivery = [
   }
 ]
 
-export default delivery
+export default deliveries

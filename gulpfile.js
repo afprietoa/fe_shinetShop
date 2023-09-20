@@ -1,7 +1,6 @@
 const {src, dest, watch, series} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const typescript = require('gulp-typescript');
-const babel = require('gulp-babel');
 //Images
 const imagemin = require('gulp-imagemin')
 
@@ -16,19 +15,18 @@ function css(done){
 
 function jsc(done){
     
-    src('src/tsc/**/*.ts')//Identify the main file
-    .pipe(typescript())//Compile SASS
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
-    .pipe(dest('build/jsc'))//Export and save file in the location
+    src('src/**/*.ts')//Identify the main file
+    .pipe(typescript({
+        module: "es6"
+    }))//Compile SASS
+    .pipe(dest('build/'))//Export and save file in the location
     
     done();
 }
 
 function dev(){
     watch('src/scss/**/*.scss', css);
-    watch('src/tsc/**/*.ts', jsc);
+    watch('src/**/*.ts', jsc);
 }
 
 function images(done) {

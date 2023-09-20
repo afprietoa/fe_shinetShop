@@ -1,0 +1,165 @@
+var products = [
+    {
+        id: 1,
+        name: "Angular Speedster Board 2000",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        price: 200,
+        pictureUrl: "../../build/assets/images/sb-ang1.png",
+        productType: "Boards",
+        productBrand: "Angular"
+    },
+    {
+        id: 2,
+        name: "Green Angular Board 3000",
+        description: "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+        price: 150,
+        pictureUrl: "../../build/assets/images/sb-ang2.png",
+        productType: "Boards",
+        productBrand: "Angular"
+    },
+    {
+        id: 3,
+        name: "Core Board Speed Rush 3",
+        description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        price: 180,
+        pictureUrl: "../../build/assets/images/sb-core1.png",
+        productType: "Boards",
+        productBrand: "NetCore"
+    },
+    {
+        id: 4,
+        name: "Net Core Super Board",
+        description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+        price: 300,
+        pictureUrl: "../../build/assets/images/sb-core2.png",
+        productType: "Boards",
+        productBrand: "NetCore"
+    },
+    {
+        id: 5,
+        name: "React Board Super Whizzy Fast",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        price: 250,
+        pictureUrl: "../../build/assets/images/sb-react1.png",
+        productType: "Boards",
+        productBrand: "React"
+    },
+    {
+        id: 6,
+        name: "Typescript Entry Board",
+        description: "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+        price: 120,
+        pictureUrl: "../../build/assets/images/sb-ts1.png",
+        productType: "Boards",
+        productBrand: "Typescript"
+    },
+    {
+        id: 7,
+        name: "Core Blue Hat",
+        description: "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        price: 10,
+        pictureUrl: "../../build/assets/images/hat-core1.png",
+        productType: "Hats",
+        productBrand: "NetCore"
+    },
+    {
+        id: 8,
+        name: "Green React Woolen Hat",
+        description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        price: 8,
+        pictureUrl: "../../build/assets/images/hat-react1.png",
+        productType: "Hats",
+        productBrand: "React"
+    },
+    {
+        id: 9,
+        name: "Purple React Woolen Hat",
+        description: "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        price: 15,
+        pictureUrl: "../../build/assets/images/hat-react2.png",
+        productType: "Hats",
+        productBrand: "React"
+    },
+    {
+        id: 10,
+        name: "Blue Code Gloves",
+        description: "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+        price: 18,
+        pictureUrl: "../../build/assets/images/glove-code1.png",
+        productType: "Gloves",
+        productBrand: "VS Code"
+    },
+    {
+        id: 11,
+        name: "Green Code Gloves",
+        description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+        price: 15,
+        pictureUrl: "../../build/assets/images/glove-code2.png",
+        productType: "Gloves",
+        productBrand: "VS Code"
+    },
+    {
+        id: 12,
+        name: "Purple React Gloves",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+        price: 16,
+        pictureUrl: "../../build/assets/images/glove-react1.png",
+        productType: "Gloves",
+        productBrand: "React"
+    },
+    {
+        id: 13,
+        name: "Green React Gloves",
+        description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+        price: 14,
+        pictureUrl: "../../build/assets/images/glove-react2.png",
+        productType: "Gloves",
+        productBrand: "React"
+    },
+    {
+        id: 14,
+        name: "Redis Red Boots",
+        description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        price: 250,
+        pictureUrl: "../../build/assets/images/boot-redis1.png",
+        productType: "Boots",
+        productBrand: "Redis"
+    },
+    {
+        id: 15,
+        name: "Core Red Boots",
+        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+        price: 189.99,
+        pictureUrl: "../../build/assets/images/boot-core2.png",
+        productType: "Boots",
+        productBrand: "NetCore"
+    },
+    {
+        id: 16,
+        name: "Core Purple Boots",
+        description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+        price: 199.99,
+        pictureUrl: "../../build/assets/images/boot-core1.png",
+        productType: "Boots",
+        productBrand: "NetCore"
+    },
+    {
+        id: 17,
+        name: "Angular Purple Boots",
+        description: "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+        price: 150,
+        pictureUrl: "../../build/assets/images/boot-ang2.png",
+        productType: "Boots",
+        productBrand: "Angular"
+    },
+    {
+        id: 18,
+        name: "Angular Blue Boots",
+        description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+        price: 180,
+        pictureUrl: "../../build/assets/images/boot-ang1.png",
+        productType: "Boots",
+        productBrand: "Angular"
+    }
+];
+export default products;

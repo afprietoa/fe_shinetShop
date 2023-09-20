@@ -1,12 +1,14 @@
-const products = [
+import {Product} from '../interfaces/product.js';
+
+const products:Array<Product> = [
   {
     id: 1,
     name: "Angular Speedster Board 2000",
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     price: 200,
     pictureUrl: "../../build/assets/images/sb-ang1.png",
-    productTypeId: "Boards",
-    productBrandId: "Angular"
+    productType: "Boards",
+    productBrand: "Angular"
   },
   {
     id: 2,
@@ -14,8 +16,8 @@ const products = [
     description: "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     price: 150,
     pictureUrl: "../../build/assets/images/sb-ang2.png",
-    productTypeId: "Boards",
-    productBrandId: "Angular"
+    productType: "Boards",
+    productBrand: "Angular"
   },
   {
     id: 3,
@@ -23,8 +25,8 @@ const products = [
     description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     price: 180,
     pictureUrl: "../../build/assets/images/sb-core1.png",
-    productTypeId: "Boards",
-    productBrandId: "NetCore"
+    productType: "Boards",
+    productBrand: "NetCore"
   },
   {
     id: 4,
@@ -32,8 +34,8 @@ const products = [
     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     price: 300,
     pictureUrl: "../../build/assets/images/sb-core2.png",
-    productTypeId: "Boards",
-    productBrandId: "NetCore"
+    productType: "Boards",
+    productBrand: "NetCore"
   },
   {
     id: 5,
@@ -41,8 +43,8 @@ const products = [
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     price: 250,
     pictureUrl: "../../build/assets/images/sb-react1.png",
-    productTypeId: "Boards",
-    productBrandId: "React"
+    productType: "Boards",
+    productBrand: "React"
   },
   {
     id: 6,
@@ -50,8 +52,8 @@ const products = [
     description: "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     price: 120,
     pictureUrl: "../../build/assets/images/sb-ts1.png",
-    productTypeId: "Boards",
-    productBrandId: "Typescript"
+    productType: "Boards",
+    productBrand: "Typescript"
   },
   {
     id: 7,
@@ -59,8 +61,8 @@ const products = [
     description: "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     price: 10,
     pictureUrl: "../../build/assets/images/hat-core1.png",
-    productTypeId: "Hats",
-    productBrandId: "NetCore"
+    productType: "Hats",
+    productBrand: "NetCore"
   },
   {
     id: 8,
@@ -68,8 +70,8 @@ const products = [
     description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     price: 8,
     pictureUrl: "../../build/assets/images/hat-react1.png",
-    productTypeId: "Hats",
-    productBrandId: "React"
+    productType: "Hats",
+    productBrand: "React"
   },
   {
     id: 9,
@@ -77,8 +79,8 @@ const products = [
     description: "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     price: 15,
     pictureUrl: "../../build/assets/images/hat-react2.png",
-    productTypeId: "Hats",
-    productBrandId: "React"
+    productType: "Hats",
+    productBrand: "React"
   },
   {
     id: 10,
@@ -86,8 +88,8 @@ const products = [
     description: "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
     price: 18,
     pictureUrl: "../../build/assets/images/glove-code1.png",
-    productTypeId: "Gloves",
-    productBrandId: "VS Code"
+    productType: "Gloves",
+    productBrand: "VS Code"
   },
   {
     id: 11,
@@ -95,8 +97,8 @@ const products = [
     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     price: 15,
     pictureUrl: "../../build/assets/images/glove-code2.png",
-    productTypeId: "Gloves",
-    productBrandId: "VS Code"
+    productType: "Gloves",
+    productBrand: "VS Code"
   },
   {
     id: 12,
@@ -104,8 +106,8 @@ const products = [
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
     price: 16,
     pictureUrl: "../../build/assets/images/glove-react1.png",
-    productTypeId: "Gloves",
-    productBrandId: "React"
+    productType: "Gloves",
+    productBrand: "React"
   },
   {
     id: 13,
@@ -113,8 +115,8 @@ const products = [
     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     price: 14,
     pictureUrl: "../../build/assets/images/glove-react2.png",
-    productTypeId: "Gloves",
-    productBrandId: "React"
+    productType: "Gloves",
+    productBrand: "React"
   },
   {
     id: 14,
@@ -122,8 +124,8 @@ const products = [
     description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     price: 250,
     pictureUrl: "../../build/assets/images/boot-redis1.png",
-    productTypeId: "Boots",
-    productBrandId: "Redis"
+    productType: "Boots",
+    productBrand: "Redis"
   },
   {
     id: 15,
@@ -131,8 +133,8 @@ const products = [
     description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
     price: 189.99,
     pictureUrl: "../../build/assets/images/boot-core2.png",
-    productTypeId: "Boots",
-    productBrandId: "NetCore"
+    productType: "Boots",
+    productBrand: "NetCore"
   },
   {
     id: 16,
@@ -140,8 +142,8 @@ const products = [
     description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
     price: 199.99,
     pictureUrl: "../../build/assets/images/boot-core1.png",
-    productTypeId: "Boots",
-    productBrandId: "NetCore"
+    productType: "Boots",
+    productBrand: "NetCore"
   },
   {
     id: 17,
@@ -149,8 +151,8 @@ const products = [
     description: "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
     price: 150,
     pictureUrl: "../../build/assets/images/boot-ang2.png",
-    productTypeId: "Boots",
-    productBrandId: "Angular"
+    productType: "Boots",
+    productBrand: "Angular"
   },
   {
     id: 18,
@@ -158,8 +160,8 @@ const products = [
     description: "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
     price: 180,
     pictureUrl: "../../build/assets/images/boot-ang1.png",
-    productTypeId: "Boots",
-    productBrandId: "Angular"
+    productType: "Boots",
+    productBrand: "Angular"
   }
 ]
 
