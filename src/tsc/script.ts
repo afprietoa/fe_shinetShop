@@ -6,7 +6,9 @@ import types from './data/types.js';
 import brands from './data/brands.js';
 import { sortCards } from './modules/sortCards.js';
 import { addProductToSessionStorage } from './utils/sessionStorage.js';
+import { printHeader } from './modules/printHeader.js';
 
+const headerContainer = document.getElementById('header-container') as HTMLFormElement;
 const cardsContainer = document.getElementById('cards-container') as HTMLFormElement;
 const listContainer1 = document.getElementById('list-container-1') as HTMLFormElement;
 const listContainer2 = document.getElementById('list-container-2') as HTMLFormElement;
@@ -15,6 +17,9 @@ const sorts: Array<string> = Array("alphabetical","lowToHigh","highToLow");
 
 document.addEventListener('DOMContentLoaded',()=>{
     try{
+
+        printHeader( headerContainer,'Shop');
+
         printCards(cardsContainer, products);
         printList(listContainer1, brands);
         printList(listContainer2, types);
@@ -32,6 +37,6 @@ document.addEventListener('click', (event:MouseEvent)=>{
     const target = event.target as HTMLElement;
     if(target.classList.contains('view')){
         addProductToSessionStorage(target.id);
-        location.href = "../pages/detail.html"
+        location.href = "../src/pages/detail.html"
     }
 });

@@ -27,6 +27,6 @@ document.addEventListener('click', function (event) {
     var target = event.target;
     if (target.classList.contains('view')) {
         addProductToSessionStorage(target.id);
-        location.href = "../pages/detail.html";
+        location.href = "../src/pages/detail.html";
     }
 });

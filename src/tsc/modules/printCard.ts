@@ -31,15 +31,15 @@ export const printCard:(container: HTMLElement|null, product: Product) => void =
     divControls.setAttribute('class','d-flex justify-content-start align-items-center');
 
     let btnMinus = document.createElement('i') as HTMLElement;
-    btnMinus.setAttribute('class','fa fa-minus-circle text-warning me-2');
+    btnMinus.setAttribute('class','fa fa-minus-circle text-warning me-2 action-counter');
 
     let spanTxt = document.createElement('span') as HTMLElement;
-    spanTxt.setAttribute('class','font-weight-bold');
+    spanTxt.setAttribute('class','font-weight-bold value-counter');
     let txtCounter= document.createTextNode((product?.quantity || 0).toString()) as Text;
     spanTxt.appendChild(txtCounter);
 
     let btnPlus = document.createElement('i') as HTMLElement;
-    btnPlus.setAttribute('class','fa fa-plus-circle text-warning me-2');
+    btnPlus.setAttribute('class','fa fa-plus-circle text-warning me-2 action-counter');
 
     let btnCart = document.createElement('button') as HTMLElement;
     btnCart.setAttribute('class','btn btn-outline-secondary');
