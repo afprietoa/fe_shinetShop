@@ -26,7 +26,8 @@ export var printCards = function (container, array) {
         var btnCart = document.createElement('button');
         btnCart.setAttribute('class', 'btn btn-outline-secondary fa fa-shopping-cart me-2');
         var btnView = document.createElement('button');
-        btnView.setAttribute('class', 'btn btn-outline-secondary');
+        btnView.setAttribute('class', 'btn btn-outline-secondary view');
+        btnView.setAttribute('id', product.id.toString());
         var txtView = document.createTextNode('View');
         btnView.appendChild(txtView);
         divControls.appendChild(btnCart);

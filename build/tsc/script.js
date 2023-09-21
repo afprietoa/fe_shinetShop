@@ -5,6 +5,7 @@ import { filterCards } from './modules/filterCards.js';
 import types from './data/types.js';
 import brands from './data/brands.js';
 import { sortCards } from './modules/sortCards.js';
+import { addProductToSessionStorage } from './utils/sessionStorage.js';
 var cardsContainer = document.getElementById('cards-container');
 var listContainer1 = document.getElementById('list-container-1');
 var listContainer2 = document.getElementById('list-container-2');
@@ -20,5 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     catch (error) {
         console.log(error);
+    }
+});
+document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (target.classList.contains('view')) {
+        addProductToSessionStorage(target.id);
+        location.href = "../pages/detail.html";
     }
 });

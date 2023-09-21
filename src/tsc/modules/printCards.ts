@@ -40,7 +40,8 @@ array.forEach((product)=>{
     btnCart.setAttribute('class','btn btn-outline-secondary fa fa-shopping-cart me-2');
 
     let btnView = document.createElement('button') as HTMLElement;
-    btnView.setAttribute('class','btn btn-outline-secondary');
+    btnView.setAttribute('class','btn btn-outline-secondary view');
+    btnView.setAttribute('id', product.id.toString());
     let txtView= document.createTextNode('View') as Text;
     btnView.appendChild(txtView);
 

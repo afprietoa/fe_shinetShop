@@ -11867,6 +11867,18 @@ textarea.form-control-lg {
   border-radius: 50%;
 }
 
+a {
+  text-decoration: none;
+  color: #343a40;
+}
+a:hover {
+  color: orange;
+}
+
+.logo {
+  cursor: pointer;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

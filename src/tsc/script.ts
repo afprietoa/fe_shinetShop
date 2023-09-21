@@ -5,6 +5,7 @@ import { filterCards } from './modules/filterCards.js';
 import types from './data/types.js';
 import brands from './data/brands.js';
 import { sortCards } from './modules/sortCards.js';
+import { addProductToSessionStorage } from './utils/sessionStorage.js';
 
 const cardsContainer = document.getElementById('cards-container') as HTMLFormElement;
 const listContainer1 = document.getElementById('list-container-1') as HTMLFormElement;
@@ -26,3 +27,11 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log(error);
     }
 })
+
+document.addEventListener('click', (event:MouseEvent)=>{
+    const target = event.target as HTMLElement;
+    if(target.classList.contains('view')){
+        addProductToSessionStorage(target.id);
+        location.href = "../pages/detail.html"
+    }
+});
