@@ -1,4 +1,7 @@
 export var printCards = function (container, array) {
+    while (container === null || container === void 0 ? void 0 : container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
     array.forEach(function (product) {
         var divCard = document.createElement('div');
         divCard.setAttribute('class', 'card h-100 shadow-sm');

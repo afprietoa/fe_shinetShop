@@ -2,6 +2,9 @@ import {Product} from '../interfaces/product.js';
 
 export const printCards:(container: HTMLElement|null, array: Array<Product>) => void = (container, array) =>{
 
+    while (container?.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 
 array.forEach((product)=>{
     let divCard = document.createElement('div') as HTMLElement;
