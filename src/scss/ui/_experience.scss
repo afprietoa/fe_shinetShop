@@ -1,0 +1,42 @@
+.card-img-filter{
+    filter:brightness(0.5);
+    height: 100%;
+}
+
+.card{
+    transition-duration: .6s;
+    clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 50%,
+        100% 100%,
+        50% 100%,
+        0 100%,
+        0 50%,
+        0 0
+    );
+}
+.card-effect:hover .card{
+    clip-path: polygon(
+        50% 0,
+        50% 0,
+        100% 50%,
+        100% 50%,
+        50% 100%,
+        50% 100%,
+        0 50%,
+        0 50%
+    );
+}
+.card-img-overlay{
+    transition-duration: .6s;
+}
+.card-effect:hover .card-img-overlay{
+    transform: scale(0.9);
+}
+.card-effect{
+    height: 25rem;
+}
+.experience-card{
+    height: 100%;
+}

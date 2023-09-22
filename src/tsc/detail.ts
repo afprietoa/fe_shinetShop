@@ -16,11 +16,11 @@ const productId: number | null = productIdStr ? parseInt(productIdStr) : null;
 document.addEventListener('DOMContentLoaded',()=>{
     try{
 
-        printHeader( headerContainer,'Shop');
-
+        
         if(productId){
             const product: Array<Product> = products.filter((item) => item.id === productId);
-
+            
+            printHeader( headerContainer,product[0].name);
             printCard(cardContainer, product[0]);
         }
     }catch(error:any){

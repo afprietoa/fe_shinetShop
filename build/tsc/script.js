@@ -6,12 +6,15 @@ import types from './data/types.js';
 import brands from './data/brands.js';
 import { sortCards } from './modules/sortCards.js';
 import { addProductToSessionStorage } from './utils/sessionStorage.js';
+import { printHeader } from './modules/printHeader.js';
+var headerContainer = document.getElementById('header-container');
 var cardsContainer = document.getElementById('cards-container');
 var listContainer1 = document.getElementById('list-container-1');
 var listContainer2 = document.getElementById('list-container-2');
 var sorts = Array("alphabetical", "lowToHigh", "highToLow");
 document.addEventListener('DOMContentLoaded', function () {
     try {
+        printHeader(headerContainer, 'Shop');
         printCards(cardsContainer, products);
         printList(listContainer1, brands);
         printList(listContainer2, types);

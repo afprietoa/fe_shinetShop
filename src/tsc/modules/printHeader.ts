@@ -15,19 +15,22 @@ export const printHeader:(container: HTMLElement|null, title: string) => void = 
     divBreadCrumb.setAttribute('class','col-3');
 
     let nav = document.createElement('nav') as HTMLElement;
+    nav.setAttribute('aria-label','breadcrumb');
 
     let ol = document.createElement('ol') as HTMLElement;
+    ol.setAttribute('class','breadcrumb');
 
     let liTxt = document.createElement('li') as HTMLElement;
     liTxt.setAttribute('class','breadcrumb-item');
     let a = document.createElement('a') as HTMLElement;
+    a.setAttribute('href','#');
     let txtHome= document.createTextNode('Home') as Text;
     a.appendChild(txtHome);
     liTxt.appendChild(a);
 
     let li2Txt = document.createElement('li') as HTMLElement;
-    liTxt.setAttribute('class','breadcrumb-item');
-    liTxt.setAttribute('aria-current','page');
+    li2Txt.setAttribute('class','breadcrumb-item active');
+    li2Txt.setAttribute('aria-current','page');
     let txtLib= document.createTextNode('Library') as Text;
     li2Txt.appendChild(txtLib);
     
@@ -35,6 +38,8 @@ export const printHeader:(container: HTMLElement|null, title: string) => void = 
     ol.appendChild(li2Txt);
 
     nav.appendChild(ol);
+
+    divBreadCrumb.appendChild(nav);
 
     container?.appendChild(divTitle);
     container?.appendChild(divBreadCrumb);

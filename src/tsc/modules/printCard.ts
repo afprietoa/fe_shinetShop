@@ -23,6 +23,7 @@ export const printCard:(container: HTMLElement|null, product: Product) => void =
     h2Txt.appendChild(txtName);
 
     let pTxt = document.createElement('p') as HTMLElement;
+    pTxt.setAttribute('class','value-price');
     let txtPrice= document.createTextNode(`$${product.price.toString()}`) as Text;
     pTxt.appendChild(txtPrice);
 
