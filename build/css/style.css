@@ -11981,6 +11981,10 @@ a:hover {
   margin-right: 15px;
 }
 
+.dashboard-container {
+  background-color: #eee;
+}
+
 .sidebar {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../../build/assets/images/patron.jpg");
@@ -12060,4 +12064,16 @@ a:hover {
   .top-navbar {
     position: static;
   }
+}
+.card-common {
+  box-shadow: 1px 2px 5px #999;
+  transition: all 4s;
+}
+.card-common:hover {
+  box-shadow: 2px 3px 15px #999;
+  transform: translateY(-1px);
+}
+
+.task-border {
+  border-left: 3px solid #f66436;
 }

@@ -1,3 +1,8 @@
+.dashboard-container{
+    background-color: #eee;
+}
+
+// SIDEBAR
 .sidebar{
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url('../../../build/assets/images/patron.jpg');
@@ -30,7 +35,9 @@
         transform: translateY(-1px);
     }
 }
+// END OF SIDEBAR
 
+// NAVBAR
 .search-input{
     background: transparent;
     border: none;
@@ -80,3 +87,20 @@
         position: static;
     }
 }
+// END OF NAVBAR
+// CARDS
+.card-common{
+    box-shadow: 1px 2px 5px #999;
+    transition: all 4s;
+    &:hover{
+        box-shadow: 2px 3px 15px #999;
+        transform: translateY(-1px);
+    }
+}
+// END OF CARDS
+
+// TASK LIST
+.task-border{
+    border-left: 3px solid #f66436;
+}
+// END OF TASK LIST
