@@ -36,7 +36,7 @@ export const printCard:(container: HTMLElement|null, product: Product) => void =
 
     let spanTxt = document.createElement('span') as HTMLElement;
     spanTxt.setAttribute('class','font-weight-bold value-counter');
-    let txtCounter= document.createTextNode((product?.quantity || 0).toString()) as Text;
+    let txtCounter= document.createTextNode("0") as Text;
     spanTxt.appendChild(txtCounter);
 
     let btnPlus = document.createElement('i') as HTMLElement;

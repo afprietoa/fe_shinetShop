@@ -23,7 +23,7 @@ export var printCard = function (container, product) {
     btnMinus.setAttribute('class', 'fa fa-minus-circle text-warning me-2 action-counter');
     var spanTxt = document.createElement('span');
     spanTxt.setAttribute('class', 'font-weight-bold value-counter');
-    var txtCounter = document.createTextNode(((product === null || product === void 0 ? void 0 : product.quantity) || 0).toString());
+    var txtCounter = document.createTextNode("0");
     spanTxt.appendChild(txtCounter);
     var btnPlus = document.createElement('i');
     btnPlus.setAttribute('class', 'fa fa-plus-circle text-warning me-2 action-counter');

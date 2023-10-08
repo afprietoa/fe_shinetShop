@@ -11887,6 +11887,12 @@ a:hover {
   color: white;
 }
 
+.product-title {
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
 .action-counter {
   cursor: pointer;
   font-size: 2em;
@@ -12076,4 +12082,36 @@ a:hover {
 
 .task-border {
   border-left: 3px solid #f66436;
+}
+
+:root {
+  --warning-color: #df2525;
+}
+
+.input-container--invalid {
+  margin-bottom: 0.5rem;
+}
+
+.input-container--invalid .input {
+  border: 1px solid var(--warning-color);
+  border-radius: 7px;
+}
+
+.input-container--invalid .input-label {
+  color: var(--warning-color);
+}
+
+.input-message-error {
+  display: none;
+}
+
+.input-container--invalid .input-message-error {
+  color: var(--warning-color);
+  display: block;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.input-container--invalid input {
+  border-color: var(--warning-color);
 }

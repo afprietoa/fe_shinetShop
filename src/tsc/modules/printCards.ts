@@ -1,3 +1,4 @@
+import { Cart } from '../classes/cart.js';
 import {Product} from '../interfaces/product.js';
 
 export const printCards:(container: HTMLElement|null, array: Array<Product>) => void = (container, array) =>{
@@ -22,7 +23,7 @@ array.forEach((product)=>{
 
 
     let h6Txt = document.createElement('h6') as HTMLElement;
-    h6Txt.setAttribute('class','text-uppercase');
+    h6Txt.setAttribute('class','text-uppercase product-title');
     let txtName= document.createTextNode(product.name) as Text;
     h6Txt.appendChild(txtName);
     
@@ -37,7 +38,10 @@ array.forEach((product)=>{
     divControls.setAttribute('class','btn-group mt-auto');
 
     let btnCart = document.createElement('button') as HTMLElement;
-    btnCart.setAttribute('class','btn btn-outline-secondary fa fa-shopping-cart me-2');
+    btnCart.setAttribute('class','btn btn-outline-secondary me-2 bag-btn');
+    btnCart.setAttribute('data-id',`${product.id}`);
+    let txtCart= document.createTextNode('Add To Bag') as Text;
+    btnCart.appendChild(txtCart);
 
     let btnView = document.createElement('button') as HTMLElement;
     btnView.setAttribute('class','btn btn-outline-secondary view');
@@ -57,6 +61,5 @@ array.forEach((product)=>{
 
     container?.appendChild(divCard);
 });
-
 
 }

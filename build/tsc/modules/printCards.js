@@ -13,7 +13,7 @@ export var printCards = function (container, array) {
         var aTxt = document.createElement('a');
         aTxt.setAttribute('class', 'text-decoration-none');
         var h6Txt = document.createElement('h6');
-        h6Txt.setAttribute('class', 'text-uppercase');
+        h6Txt.setAttribute('class', 'text-uppercase product-title');
         var txtName = document.createTextNode(product.name);
         h6Txt.appendChild(txtName);
         aTxt.appendChild(h6Txt);
@@ -24,7 +24,10 @@ export var printCards = function (container, array) {
         var divControls = document.createElement('div');
         divControls.setAttribute('class', 'btn-group mt-auto');
         var btnCart = document.createElement('button');
-        btnCart.setAttribute('class', 'btn btn-outline-secondary fa fa-shopping-cart me-2');
+        btnCart.setAttribute('class', 'btn btn-outline-secondary me-2 bag-btn');
+        btnCart.setAttribute('data-id', "".concat(product.id));
+        var txtCart = document.createTextNode('Add To Bag');
+        btnCart.appendChild(txtCart);
         var btnView = document.createElement('button');
         btnView.setAttribute('class', 'btn btn-outline-secondary view');
         btnView.setAttribute('id', product.id.toString());
